@@ -10,7 +10,7 @@ Folder.localized/.localized/de.strings:
 
 @public.add
 def find(path):
-    """return list with `.strings` files"""
+    """return a list with `.strings` files"""
     result = []
     for f in os.listdir(path):
         name, ext = os.path.splitext(f)
