@@ -1,6 +1,7 @@
-#!/usr/bin/env python
+__all__ = ['find', 'load', 'update']
+
+
 import os
-import public
 
 """
 Folder.localized/.localized/de.strings:
@@ -8,7 +9,6 @@ Folder.localized/.localized/de.strings:
 """
 
 
-@public.add
 def find(path):
     """return a list with `.strings` files"""
     result = []
@@ -20,7 +20,6 @@ def find(path):
     return result
 
 
-@public.add
 def load(path):
     """return dictionary with keys as languages and translations with values"""
     for s in filter(lambda s: " = " in s, open(path).read().splitlines()):

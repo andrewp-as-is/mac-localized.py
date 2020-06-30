@@ -1,14 +1,13 @@
 <!--
-https://pypi.org/project/readme-generator/
-https://pypi.org/project/python-readme-generator/
+https://readme42.com
 -->
 
-[![](https://img.shields.io/badge/OS-MacOS-blue.svg?longCache=True)]()
-[![](https://img.shields.io/pypi/pyversions/mac-localized.svg?longCache=True)](https://pypi.org/project/mac-localized/)
-[![](https://img.shields.io/pypi/v/mac-localized.svg?maxAge=3600)](https://pypi.org/project/mac-localized/)
-[![Travis](https://api.travis-ci.org/looking-for-a-job/mac-localized.py.svg?branch=master)](https://travis-ci.org/looking-for-a-job/mac-localized.py/)
 
-#### Installation
+[![](https://img.shields.io/pypi/v/mac-localized.svg?maxAge=3600)](https://pypi.org/project/mac-localized/)
+[![](https://img.shields.io/badge/License-Unlicense-blue.svg?longCache=True)](https://unlicense.org/)
+[![](https://github.com/andrewp-as-is/mac-localized.py/workflows/tests42/badge.svg)](https://github.com/andrewp-as-is/mac-localized.py/actions)
+
+### Installation
 ```bash
 $ [sudo] pip install mac-localized
 ```
@@ -26,19 +25,6 @@ Release Notes.localized/
 ```
 "Release Notes" = "Localized name";
 ```
-
-#### Functions
-function|`__doc__`
--|-
-`mac_localized.fullpath(path)` |return path with `.localized` postfix
-`mac_localized.get(path, lang)` |return translation
-`mac_localized.load(path)` |return dictionary with keys as languages and translations with values
-`mac_localized.mkdir(path, **strings)` |mkdir (if not exists), write translations and return folder fullpath
-`mac_localized.name(path)` |return folder name without `.localized` prefix
-`mac_localized.rm(path, languages=None)` |rm .localized/ lang files or .localized/ folder
-`mac_localized.update(path, **strings)` |update folder translations
-`mac_localized.strings.find(path)` |return a list with `.strings` files
-`mac_localized.strings.load(path)` |return dictionary with keys as languages and translations with values
 
 #### Examples
 ```python
@@ -63,5 +49,5 @@ function|`__doc__`
 +   [Display Names](https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPFileSystem/Articles/DisplayNames.html)
 
 <p align="center">
-    <a href="https://pypi.org/project/python-readme-generator/">python-readme-generator</a>
+    <a href="https://readme42.com/">readme42.com</a>
 </p>

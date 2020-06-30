@@ -1,7 +1,8 @@
-#!/usr/bin/env python
+__all__ = ['name', 'fullpath', 'load', 'rm', 'mkdir', 'update', 'get']
+
+
 import os
 import shutil
-import public
 import mac_localized.strings
 import values
 
@@ -11,13 +12,11 @@ Folder.localized/.localized/de.strings:
 """
 
 
-@public.add
 def name(path):
     """return folder name without `.localized` prefix"""
     return os.path.basename(path).replace(".localized", "")
 
 
-@public.add
 def fullpath(path):
     """return path with `.localized` postfix"""
     if os.path.splitext(path)[1] != ".localized":
@@ -25,7 +24,6 @@ def fullpath(path):
     return os.path.expanduser(path)
 
 
-@public.add
 def load(path):
     """return dictionary with keys as languages and translations with values"""
     result = dict()
@@ -39,7 +37,6 @@ def load(path):
     return result
 
 
-@public.add
 def rm(path, languages=None):
     """rm .localized/ lang files or .localized/ folder"""
     _localized = os.path.join(fullpath(path), ".localized")
@@ -51,7 +48,6 @@ def rm(path, languages=None):
         shutil.rmtree(_localized)
 
 
-@public.add
 def mkdir(path, **strings):
     """mkdir (if not exists), write translations and return folder fullpath"""
     path = fullpath(path)
@@ -61,7 +57,6 @@ def mkdir(path, **strings):
     return path
 
 
-@public.add
 def update(path, **strings):
     """update folder translations"""
     for lang, value in strings.items():
@@ -69,7 +64,6 @@ def update(path, **strings):
         mac_localized.strings.update(f, name(path), value)
 
 
-@public.add
 def get(path, lang):
     """return translation"""
     return load(path).get(lang, None)
